@@ -28,9 +28,9 @@ public class App {
         sets.construirTreeSet(); 
     }
 
-    public static void construirTreeSetConComparador(Sets sets) {
+      public static void construirTreeSetConComparador(Sets sets) {
         System.out.println("-----------TreeSet Con Comparador----------");
         System.out.println("ELEMENTOS DEL TREESET CON COMPARADOR (ORDEN POR LONGITUD Y ALFABÉTICO)");
-        sets.construirTreeSetConComparador(); 
+        sets.construirTreeSetConComparador();  // Corregir el nombre del método aquí
     }
 }

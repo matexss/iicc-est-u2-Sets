@@ -28,7 +28,7 @@ public class Sets {
     
     public void construirLinkedHashSet() {
         Set<String> palabrasLinkeadas = new LinkedHashSet<>();
-         palabrasLinkeadas.add("Laptop");
+        palabrasLinkeadas.add("Laptop");
         palabrasLinkeadas.add("Manzana");
         palabrasLinkeadas.add("Pera");
         palabrasLinkeadas.add("Celular");
@@ -43,7 +43,7 @@ public class Sets {
 
     public void construirTreeSet() {
         Set<String> palabrasTreeSet = new TreeSet<>();
-         palabrasTreeSet.add("Laptop");
+        palabrasTreeSet.add("Laptop");
         palabrasTreeSet.add("Manzana");
         palabrasTreeSet.add("Pera");
         palabrasTreeSet.add("Celular");
@@ -56,24 +56,39 @@ public class Sets {
         }
     }
 
-    public void construirTreeSetConComparador() {
-        Comparator<String> miComparador = new Comparator<String>() {
-            @Override
-            public int compare(String s1, String s2) {
-                int result = Integer.compare(s1.length(), s2.length());
-                // Si tienen la misma longitud, se comparan alfbabeticamente
-                if (result == 0) {
-                    return s1.compareTo(s2);
+    public void construirTreeSetConComparador(boolean ascendente) {
+        Comparator<String> miComparador;
+
+        if (ascendente) {
+            miComparador = new Comparator<String>() {
+                @Override
+                public int compare(String s1, String s2) {
+                    int result = Integer.compare(s1.length(), s2.length());
+                    if (result == 0) {
+                        return s1.compareTo(s2); 
+                    }
+                    return result; 
                 }
-                return result;
-            }
-        };
+            };
+        } else {
+            miComparador = new Comparator<String>() {
+                @Override
+                public int compare(String s1, String s2) {
+                    int result = Integer.compare(s2.length(), s1.length()); 
+                    if (result == 0) {
+                        return s2.compareTo(s1);  
+                    }
+                    return result;  
+                }
+            };
+        }
 
         Set<String> palabrasTreeSet = new TreeSet<>(miComparador);
         palabrasTreeSet.add("Laptop");
         palabrasTreeSet.add("Manzana");
         palabrasTreeSet.add("Pera");
         palabrasTreeSet.add("Celular");
+        palabrasTreeSet.add("Celulas"); 
         palabrasTreeSet.add("Laptop");
         palabrasTreeSet.add("Pera");
         palabrasTreeSet.add("Laptop");
@@ -82,7 +97,4 @@ public class Sets {
             System.out.println(palabra);
         }
     }
-
-
-    
 }
