@@ -1,3 +1,4 @@
+import controller.ContactoController;
 import controller.Sets;
 
 public class App {
@@ -8,9 +9,13 @@ public class App {
         runLinkedHashSet(sets);
         construirTreeSet(sets);
         // Pasar true o false dependiendo del orden que deseas (ascendente o descendente)
-        construirTreeSetConComparador(sets, true);  // Ascendente
-        construirTreeSetConComparador(sets, false); // Descendente
+        construirTreeSetConComparador(sets, true);  
+        construirTreeSetConComparador(sets, false); 
+        
+        
+        new ContactoController(); // Llamamos solo al constructor sin almacenar la instancia
     }
+    
 
     public static void runHashSet(Sets sets) {
         System.out.println("-----------HashSet----------");

@@ -145,6 +145,7 @@ Para ejecutar los ejercicios:
 Aquí puedes agregar una captura de pantalla del resultado de la ejecución de los ejercicios:
 
 ![Captura](![alt text](image.png))
+![alt text](image-1.png)
 
 ---
 
