@@ -1,4 +1,4 @@
-package models;
+package models; 
 import java.util.Objects;
 
 public class Contacto implements Comparable<Contacto> {  // Implementamos Comparable

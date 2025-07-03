@@ -1,5 +1,6 @@
 import controller.ContactoController;
 import controller.Sets;
+import controller.Ejercicios;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -14,6 +15,8 @@ public class App {
         
         
         new ContactoController(); // Llamamos solo al constructor sin almacenar la instancia
+        new Ejercicios(); // Llamamos solo al constructor sin almacenar la instancia
+
     }
     
 
@@ -34,6 +37,8 @@ public class App {
         System.out.println("ELEMENTOS DEL TREESET (ORDEN ASCENDENTE)");
         sets.construirTreeSet(); 
     }
+
+    
 
     public static void construirTreeSetConComparador(Sets sets, boolean ascendente) {
         System.out.println("-----------TreeSet Con Comparador----------");
